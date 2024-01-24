@@ -1,0 +1,1 @@
+'''Write a program to write the first n numbers of the Fibonacci sequence'''

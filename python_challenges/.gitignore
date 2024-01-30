@@ -1,0 +1,46 @@
+# .gitignore
+
+# Ignore pycache, __pycache__, and *.pyc files
+__pycache__
+*.pyc
+
+# Ignore pytest cache
+*pytest_cache/
+
+# Ignore virtual environment
+venv/
+
+# Ignore local development settings
+.env
+
+# Ignore IDE settings
+.idea/
+.vscode/
+
+# Ignore compiled Python files
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore logs and temporary files
+*.log
+*.pot
+*.pyo
+*.pyc
+*.pyd
+
+# Ignore database files
+*.sqlite3
+
+# Ignore configuration files
+*.swp
+*.ini
+*.cfg
+*.conf
+
+# Ignore any build artifacts
+build/
+dist/
+
+# Ignore local development files
+local_settings.py

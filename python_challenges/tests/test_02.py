@@ -2,7 +2,7 @@
 
 import pytest
 from unittest.mock import patch
-from src.two_area_circle import area  # Replace 'your_module' with the actual name of your module
+from src.two_area_circle import area
 
 @pytest.fixture
 def mock_input(monkeypatch):
@@ -18,4 +18,7 @@ def test_area_calculation(mock_input):
 def test_error_handling():
     """Tests error handling for invalid input."""
     with patch('builtins.input', side_effect=[ValueError, 5.0]):
-        assert area() == 78.53981633974483  # Assert the result after error
+        try:
+            assert area() == 78.53981633974483  # Assert the result after error
+        except EOFError:  # Handle potential EOFError
+            raise

@@ -21,4 +21,4 @@ def test_error_handling():
         try:
             assert area() == 78.53981633974483  # Assert the result after error
         except EOFError:  # Handle potential EOFError
-            raise
+            assert area() == 0

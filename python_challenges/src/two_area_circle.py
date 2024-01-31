@@ -1,19 +1,21 @@
-'''Create a program to calculate the area of a circle given its radius'''
 import math
 
-def area():
-    '''Gains user inputted radius and calculates a circle's area'''
-    try:
-        radius = float(input("Enter the radius: "))
-    except EOFError:
-        # Handle EOFError:
-        print("Error: Unexpected end of input. Please provide valid input.")
-        # Optionally, ask the user for input again or take appropriate action
-        radius = float(input("Enter the radius again: "))
-    except ValueError:
-        print("Error: Invalid input. Please enter a valid number.")
-        radius = float(input("Enter the radius again: "))
+def calculate_area(radius):
+    """Calculates the area of a circle given its radius."""
     area = math.pi * pow(radius, 2)
     return area
 
-print(area())
+def get_user_input():
+    """Prompts the user for a radius and handles potential input errors using a while loop."""
+    while True:
+        radius_str = input("Enter the radius: ")
+        try:
+            radius = float(radius_str)
+            return radius
+        except ValueError:
+            print("Invalid input. Please enter a valid number.")
+
+if __name__ == "__main__":
+    radius = get_user_input()
+    area = calculate_area(radius)
+    print(area)

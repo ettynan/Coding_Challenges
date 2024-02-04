@@ -6,5 +6,16 @@ def count_vowels(str):
     count = (len(vowels))
     return count
 
-user_input = input("Write a word to get the number of vowels: ")
-print(count_vowels(user_input))
+def get_user_input():
+    """Prompts the user for a radius and handles potential input errors using a while loop."""
+    while True:
+        try:
+            user_input = input("Write a word to get the number of vowels: ")
+            return user_input
+        except ValueError:
+            print("Invalid input. Please try again.")
+
+if __name__ == "__main__":
+    user_input = get_user_input()
+    print(count_vowels(user_input))
+

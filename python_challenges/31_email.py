@@ -1,0 +1,1 @@
+'''Crat a program that checks if a given string is a valid mail address'''

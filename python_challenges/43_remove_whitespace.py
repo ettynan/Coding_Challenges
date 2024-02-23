@@ -1,0 +1,1 @@
+'''Write a program that removes all whitespaces for a given string'''

@@ -1,1 +1,1 @@
-### Some coding challenges to work through and practice
+### Some coding challenges to work through and practice in line with Women Who code 

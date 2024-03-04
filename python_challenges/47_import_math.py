@@ -1,0 +1,1 @@
+'''Create a program that imports the math module and uses its fuctions'''

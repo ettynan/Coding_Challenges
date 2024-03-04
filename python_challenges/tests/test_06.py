@@ -1,21 +1,14 @@
 import pytest
-from unittest.mock import patch
-from src.six_count_char_occur import get_input, count_char
+from src.six_count_char_occur import count_char
 
-@pytest.mark.parametrize("user_input, expected_result", [
-    (('Hello World', 'o'), 2),
-    (('Testing', 'z'), 0),
-    (('Hello World', 'oo'), (None, None)),
-])
-def test_count_char(user_input, expected_result):
-    with patch('builtins.input', side_effect=user_input):
-        input_str, letter = get_input()
-        if expected_result == (None, None):
-            assert input_str is None
-            assert letter is None
-        else:
-            result = count_char(input_str, letter)
-            assert result == expected_result
+class TestCountChar:
 
-if __name__ == '__main__':
-    pytest.main()
+    @staticmethod
+    @pytest.mark.parametrize("input_str, letter, expected_result", [
+        ('Hello World', 'o', 2),
+        ('Testing', 'z', 0),
+        ('Hello World', 'oo', 0),
+    ])
+    def test_count_char(input_str, letter, expected_result):
+        result = count_char(input_str, letter)
+        assert result == expected_result

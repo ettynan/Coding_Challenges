@@ -1,0 +1,50 @@
+Class Node:
+    data  // Store data
+    next  // Pointer to the next node
+    prev  // Pointer to the previous node
+
+Class DoublyLinkedList:
+    head  // Pointer to the first node
+    tail  // Pointer to the last node
+
+    Function insert_at_head(data):
+        new_node = new Node(data)
+        if head is None:
+            head = new_node
+            tail = new_node
+        else:
+            new_node.next = head
+            head.prev = new_node
+            head = new_node
+
+    Function insert_at_tail(data):
+        new_node = new Node(data)
+        if tail is None:
+            head = new_node
+            tail = new_node
+        else:
+            new_node.prev = tail
+            tail.next = new_node
+            tail = new_node
+
+    Function delete_node(node):
+        if node.prev is not None:
+            node.prev.next = node.next
+        if node.next is not None:
+            node.next.prev = node.prev
+        if node == head:
+            head = node.next
+        if node == tail:
+            tail = node.prev
+
+    Function traverse_forward():
+        current = head
+        while current is not None:
+            print current.data
+            current = current.next
+
+    Function traverse_backward():
+        current = tail
+        while current is not None:
+            print current.data
+            current = current.prev

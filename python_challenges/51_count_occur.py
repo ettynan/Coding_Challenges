@@ -1,1 +1,0 @@
-'''Create a program that counts the occurrences of each word in a text file'''

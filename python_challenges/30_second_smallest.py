@@ -1,1 +1,0 @@
-'''Create a function that finds th second smallest element in a list.'''

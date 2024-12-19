@@ -1,1 +1,0 @@
-'''rite a program to remove vowels from a given string'''

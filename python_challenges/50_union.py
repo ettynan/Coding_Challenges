@@ -1,1 +1,0 @@
-'''Create a program that finds the intersection and union of two sets'''

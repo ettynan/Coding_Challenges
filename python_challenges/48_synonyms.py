@@ -1,1 +1,0 @@
-'''Create a program that replaces specific words in a text file with their synonyms'''
